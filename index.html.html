@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TCP/IP Application Services</title>
+  <style>
+
+
+
+    /* Styles for the login form */
+    .login-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+     background-image: url('Front.png');
+    }
+
+    .login-form {
+     background-color: rgb(170, 201, 206);
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(66, 101, 82, 0.1);
+      text-align: center;
+    }
+
+    .login-form input, .login-form button {
+      width: 100%;
+      margin-bottom: 20px;
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    /* Styles for the content section */
+    .content-container {
+      display: none;
+      font-family: Arial, sans-serif;
+      color: #333;
+    }
+
+    .content-container header {
+      background-color: #063466;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .content-container nav {
+      background-color: #343a40;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .content-container nav a {
+      color:white;
+      text-decoration: none;
+      padding: 10px 20px;
+      display: inline-block;
+    }
+
+    .content-container nav a:hover {
+        background-color: #08417e;
+    }
+
+    .content-container section {
+      padding: 20px;
+      margin: 20px;
+      background-color: rgb(170, 201, 206);
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .content-container h2 {
+      color: #0d4c90;
+    }
+
+    .content-container footer {
+      background-color: #343a40;
+      color:white;
+      text-align: center;
+      padding: 10px;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+
+
+<body>
+  <div class="login-container">
+    <div class="login-form">
+      <h2>Login</h2>
+      <input type="text" id="name" placeholder="Enter your name" />
+      <button onclick="loginAndShowContent()">See Content</button>
+    </div>
+  </div>
+
+
+  <div class="content-container" id="content-container">
+    <header>
+      <h1>TCP/IP Application Services</h1>
+    </header>
+   
+   
+    <nav>
+      <a href="#Introduction">Introduction</a>
+      <a href="#Working">Working</a>
+      <a href="#Importance">Importance</a>
+      <a href="#Pros/cons">Pros/cons</a>
+      <a href="#Applications">Applications</a>
+      <a href="#http">HTTP/HTTPS</a>
+      <a href="#smtp">SMTP</a>
+      <a href="#ftp">FTP</a>
+      <a href="#dns">DNS</a>
+      <a href="#dhcp">DHCP</a>
+      <a href="#telnet-ssh">Telnet/SSH</a>
+      <a href="#snmp">SNMP</a>
+    </nav>
+
+
+    <section id="Introduction">
+        <h2>What is TCP/IP?</h2>
+        <p>
+            TCP/IP stands for Transmission control protocol and is suite of communication protocols used to interconnect network devices on the internet. TCP/IP is also used as a communications protocol in a private computer network -- an intranet or extranet.<br> It specifies how data is exchanged over the internet by providing end-to-end communications that identify how it should be broken into packets, addressed, transmitted, routed and received at the destination.In 1998 first protocol was developed by IETF(Internet Engineering Task Force) known as IPv6. 
+        </p>
+    </section>
+    <img src="tcpp.png">
+
+
+   <section id="Working">
+    <h2>Working:</h2>
+     <p> TCP/IP uses the client-server model of communication in which a user or machine -- a client -- is provided a service, such as sending a webpage, by another computer -- a server -- in the network.<br>Collectively, the TCP/IP suite of protocols is classified as stateless, which means each client request is considered new because it's unrelated to previous requests. Being stateless frees up network paths so they can be used continuously.<br> The transport layer itself, however, is stateful. It transmits a single message and its connection remains in place until all the packets in a message have been received and reassembled at the destination.<br></p>
+   </section>
+   <img src="tcp.png">
+   <section id="Importance">
+    <h2> Importance:</h2>
+    <p>TCP/IP is the fundamental protocol suite that enables data transfer and communication across the internet and other networks.<br> It's nonproprietary and, as a result, isn't controlled by any single company.<br> Therefore, the IP suite can be modified easily. <br>It's compatible with all operating systems (OSes), so it can communicate with any other system.<br> The IP suite is also compatible with all types of computer hardware and networks.<br> TCP/IP is highly scalable and, as a routable protocol, can determine the most efficient path through the network.<br> It's widely used in current internet architecture. </p>
+   </section>
+  <img src="IP.png">
+
+
+
+   <section id="Pros/cons">
+    <h2> Pros:</h2>
+    <p>The advantages of using the TCP/IP model include the following:</p><br><p>It helps establish a connection between different types of computers.
+        It works independently of the OS.<br>
+        TCP/IP supports many routing protocols.<br>
+        It uses a client-server architecture that's highly scalable.<br>
+        TCP/IP can be operated independently.<br>
+        It supports several routing protocols.<br>
+        It's lightweight and doesn't place unnecessary strain on a network or computer.</p><h2>Cons:</h2><p>The disadvantages of TCP/IP include the following:</p><br><p>It's complicated to set up and manage.<br>
+            The transport layer doesn't guarantee the delivery of packets.<br>
+            It isn't easy to replace protocols in TCP/IP.<br>
+            It doesn't clearly separate the concepts of services, interfaces and protocols, so it isn't suitable for describing new technologies in new networks.<br>
+            It's especially vulnerable to synchronization attacks, which are a type of denial-of-service attack in which a bad actor uses TCP/IP.</p>
+   </section>
+    <img src="download.jpg">
+
+
+
+    <section id="Applications">
+      <h2>What Are TCP/IP Application Services?</h2>
+      <p>TCP/IP (Transmission Control Protocol/Internet Protocol) is the fundamental communication protocol suite for the internet and most local networks. TCP/IP Application Services refer to the various protocols and services that operate at the Application Layer of the TCP/IP model.</p>
+      <p>These services help users interact with the internet or other networks via applications that enable communication, file transfer, remote login, email exchanges, and more.</p>
+      <h3>Common TCP/IP Application Services:</h3>
+      <ul>
+        <li>HTTP/HTTPS</li>
+        <li>SMTP</li>
+        <li>FTP</li>
+        <li>DNS</li>
+        <li>DHCP</li>
+        <li>Telnet/SSH</li>
+        <li>SNMP</li>
+      </ul>
+    </section>
+<img src="Services.png">
+
+
+    <section id="http">
+      <h2>HTTP/HTTPS (Hypertext Transfer Protocol)</h2>
+      <p>HTTP is the foundation of data communication for the World Wide Web. It defines how messages are formatted and transmitted, and how web servers and browsers should respond to various commands. HTTPS is the secure version that uses SSL/TLS encryption.</p>
+      <h3>Uses:</h3>
+      <p>Used for browsing websites and communicating between browsers and web servers.</p>
+      <h3>Advantages:</h3>
+      <ul>
+        <li>Widely supported by all web browsers.</li>
+        <li>HTTPS ensures secure communication through encryption.</li>
+        <li>Efficient handling of large workloads due to its stateless nature.</li>
+      </ul>
+      <h3>Disadvantages:</h3>
+      <ul>
+        <li>Stateless, requiring additional mechanisms to maintain user sessions.</li>
+        <li>HTTP (without encryption) is vulnerable to attacks like eavesdropping.</li>
+      </ul>
+    </section>
+<img src="Http.png">
+
+
+    <section id="smtp">
+      <h2>SMTP (Simple Mail Transfer Protocol)</h2>
+      <p>SMTP is the protocol used for sending emails from a client to a server or between servers. It works alongside other protocols like IMAP or POP3 for email retrieval.</p>
+      <h3>Uses:</h3>
+      <p>Sending emails across the internet.</p>
+      <h3>Advantages:</h3>
+      <ul>
+        <li>Reliable and efficient for sending emails.</li>
+        <li>Works across different email clients and servers.</li>
+      </ul>
+      <h3>Disadvantages:</h3>
+      <ul>
+        <li>SMTP alone does not provide encryption (though it can use SSL/TLS).</li>
+        <li>Vulnerable to spam and phishing attacks without proper security measures.</li>
+      </ul>
+    </section>
+<img src="SMTP.png">
+
+
+    <section id="ftp">
+      <h2>FTP (File Transfer Protocol)</h2>
+      <p>FTP is used for transferring files between a client and a server over a network. It allows users to upload, download, and manage files on remote servers.</p>
+      <h3>Uses:</h3>
+      <p>Transferring large files and managing website files.</p>
+      <h3>Advantages:</h3>
+      <ul>
+        <li>Reliable for transferring large files.</li>
+        <li>Can resume interrupted file transfers.</li>
+      </ul>
+      <h3>Disadvantages:</h3>
+      <ul>
+        <li>FTP sends data in plaintext, making it insecure without encryption (like FTPS or SFTP).</li>
+        <li>Requires proper authentication and security configurations.</li>
+      </ul>
+    </section>
+<img src="FTP.png">
+
+
+    <section id="dns">
+      <h2>DNS (Domain Name System)</h2>
+      <p>DNS translates domain names (e.g., www.example.com) into IP addresses that computers use to communicate on the internet.</p>
+      <h3>Uses:</h3>
+      <p>Enabling users to access websites using human-readable domain names rather than numerical IP addresses.</p>
+      <h3>Advantages:</h3>
+      <ul>
+        <li>Simplifies internet navigation by allowing users to use domain names.</li>
+        <li>Highly scalable and distributed system.</li>
+      </ul>
+      <h3>Disadvantages:</h3>
+      <ul>
+        <li>Vulnerable to DNS spoofing or cache poisoning attacks.</li>
+        <li>DNS lookups can be slow if not cached.</li>
+      </ul>
+    </section>
+<img src="DNS.png">
+
+
+    <section id="dhcp">
+      <h2>DHCP (Dynamic Host Configuration Protocol)</h2>
+      <p>DHCP is used to dynamically assign IP addresses to devices on a network, eliminating the need for manual configuration.</p>
+      <h3>Uses:</h3>
+      <p>Automatically assigning IP addresses to devices, especially in large networks.</p>
+      <h3>Advantages:</h3>
+      <ul>
+        <li>Simplifies network management by automating IP address assignment.</li>
+        <li>Reduces configuration errors.</li>
+      </ul>
+      <h3>Disadvantages:</h3>
+      <ul>
+        <li>If the DHCP server fails, devices may not be able to obtain IP addresses.</li>
+        <li>Vulnerable to attacks like DHCP spoofing or exhaustion.</li>
+      </ul>
+    </section>
+<img src="DHCP.png">
+
+
+
+    <section id="telnet-ssh">
+      <h2>Telnet/SSH (Secure Shell)</h2>
+      <p>Telnet is a protocol for remotely accessing servers over a network. However, Telnet is insecure because it transmits data in plaintext. SSH (Secure Shell) is the secure alternative, providing encrypted communication.</p>
+      <h3>Uses:</h3>
+      <p>Remote administration and access to servers.</p>
+      <h3>Advantages:</h3>
+      <ul>
+        <li>SSH provides strong encryption for remote logins.</li>
+        <li>Allows remote file transfer and command execution.</li>
+      </ul>
+      <h3>Disadvantages:</h3>
+      <ul>
+        <li>Telnet is insecure and should be avoided in favor of SSH.</li>
+        <li>SSH requires proper key management to ensure security.</li>
+      </ul>
+    </section>
+<img src="SSH.png">
+
+
+    <section id="snmp">
+      <h2>SNMP (Simple Network Management Protocol)</h2>
+      <p>SNMP is used for managing devices on a network, such as routers, switches, and servers.</p>
+      <h3>Uses:</h3>
+      <p>Monitoring and managing network devices and performance.</p>
+      <h3>Advantages:</h3>
+      <ul>
+        <li>Provides real-time monitoring of network devices.</li>
+        <li>Works with a wide variety of devices.</li>
+      </ul>
+      <h3>Disadvantages:</h3>
+      <ul>
+        <li>SNMPv1 and SNMPv2 are insecure, transmitting data in plaintext (SNMPv3 provides encryption).</li>
+        <li>Complex to configure for large networks.</li>
+      </ul>
+    </section>
+<img src="SNMP.png">
+
+
+    <footer>
+        <p>Thank You....🫡</p>
+      <p>&copy; 2024 TCP/IP Application Services (Web Assignment#01) </p>
+    </footer>
+  </div>
+
+
+  <script>
+    function loginAndShowContent() {
+      var nameInput = document.getElementById("name");
+      var contentContainer = document.getElementById("content-container");
+
+      if (nameInput.value.trim() !== "") {
+        // Hide the login form and show the content container
+        document.querySelector(".login-container").style.display = "none";
+        contentContainer.style.display = "block";
+      } else {
+        alert("📌Welcome to my page. To read content .... Please enter your name.");
+      }
+    }
+  </script>
+</body>
+</html>
